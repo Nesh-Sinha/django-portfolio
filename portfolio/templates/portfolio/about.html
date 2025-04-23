@@ -1,0 +1,72 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}About | Nesh Sinha{% endblock %}
+
+{% block content %}
+<style>
+    .about-section {
+        padding: 2rem;
+        background-color: #f9fafb;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+        animation: fadeIn 1s ease-in;
+    }
+
+    .about-section h2 {
+        font-size: 2.5rem;
+        color: #007bff;
+        margin-bottom: 1rem;
+    }
+
+    .about-section p {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .skills-list, .education-list, .interests-list {
+        margin: 1.5rem 0;
+        padding-left: 1.5rem;
+    }
+
+    .skills-list li, .education-list li, .interests-list li {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<section class="about-section">
+    <h2>Introduction</h2>
+    <p>Hi, I'm Nesh Sinha, a B.Tech student pursuing Computer Science with a deep interest in both technology and spirituality. I create innovative digital projects, focusing on web development, data science, and exploring ways to merge tech with meaningful insights. I also share my understanding of spiritual texts, like the Bhagavad Gita, through engaging content on my YouTube channel, "The Hindu Script."</p>
+
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li><strong>Languages & Frameworks:</strong> Python, Django, HTML, CSS, JavaScript</li>
+        <li><strong>Tools & Libraries:</strong> NumPy, Pandas, Matplotlib</li>
+        <li><strong>Frontend & UI/UX Knowledge:</strong> Creating user-friendly, responsive interfaces, understanding of design principles to enhance user experience</li>
+    </ul>
+
+    <h2>Education</h2>
+    <ul class="education-list">
+        <li>B.Tech in Computer Science</li>
+        <li>Data Science Course from IITG x Masai</li>
+    </ul>
+
+    <h2>Interests & Hobbies</h2>
+    <ul class="interests-list">
+        <li>Reading and reflecting on spiritual texts, especially the Bhagavad Gita</li>
+        <li>Creating informative and engaging YouTube videos</li>
+        <li>Building innovative digital projects that combine technology and purpose</li>
+    </ul>
+
+    <h2>Personality/Philosophy</h2>
+    <p>I'm a passionate learner who values simplicity and the impact technology can have in everyday life. I believe that tech should not only solve problems but also enhance deeper understanding, which is why I incorporate spiritual insights into my work, aiming to create a balance between innovation and meaning.</p>
+</section>
+{% endblock %}

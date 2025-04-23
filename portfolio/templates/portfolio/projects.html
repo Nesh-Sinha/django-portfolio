@@ -1,0 +1,147 @@
+{% block content %}
+{% include 'portfolio/header.html' %}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #1f2937;
+        color: #f9fafb;
+    }
+
+    header {
+        background-color: #111827;
+        color: #f9fafb;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .projects-section {
+        padding: 40px 20px;
+        margin: 40px auto;
+        max-width: 1000px;
+        background-color: #111827;
+        border-radius: 8px;
+    }
+
+    h2 {
+        color: #38bdf8;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .project {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #38bdf8;
+        border-radius: 8px;
+        background-color: #1f2937;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        /* 👇 Animation fix added here */
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    .project:nth-child(1) { animation-delay: 0s; }
+    .project:nth-child(2) { animation-delay: 0.2s; }
+    .project:nth-child(3) { animation-delay: 0.4s; }
+    .project:nth-child(4) { animation-delay: 0.6s; }
+    .project:nth-child(5) { animation-delay: 0.8s; }
+    .project:nth-child(6) { animation-delay: 1s; }
+    .project:nth-child(7) { animation-delay: 1.2s; }
+    .project:nth-child(8) { animation-delay: 1.4s; }
+
+    .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+        color: #38bdf8;
+    }
+
+    .project p {
+        margin: 5px 0;
+    }
+
+    footer {
+        text-align: center;
+        background-color: #111827;
+        color: #f9fafb;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+</style>
+
+
+<section class="projects-section">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>1. Personal Portfolio Website</h3>
+        <p><strong>Tech Stack:</strong> Django, HTML, CSS</p>
+        <p><strong>Description:</strong> A dynamic and responsive website to showcase personal details, skills, and project work. Built with Django templates for dynamic content rendering.</p>
+    </div>
+
+    <div class="project">
+        <h3>2. Student Grades Analysis</h3>
+        <p><strong>Tech Stack:</strong> Python, NumPy, Matplotlib</p>
+        <p><strong>Description:</strong> A data analysis tool for evaluating student performance, generating insights using statistical methods and visualizations.</p>
+    </div>
+
+    <div class="project">
+        <h3>3. NumPy Learning Series</h3>
+        <p><strong>Tools:</strong> NumPy, Matplotlib</p>
+        <p><strong>Files:</strong> numpy_L1.py, numpy_L2.py, numpy_L3.py</p>
+        <p><strong>Description:</strong> Practical code-based learning journey through NumPy fundamentals including indexing, vector ops, broadcasting, and data plotting.</p>
+    </div>
+
+    <div class="project">
+        <h3>4. AI Travel Planner (College Project)</h3>
+        <p><strong>Tech Stack:</strong> Python, AI logic (possibly with APIs or rule-based systems)</p>
+        <p><strong>Description:</strong> A smart travel itinerary planner that helps users plan trips based on preferences, budget, and location using basic AI logic.</p>
+    </div>
+
+    <div class="project">
+        <h3>5. Python Snake Game</h3>
+        <p><strong>Tech Stack:</strong> Python, Turtle Library</p>
+        <p><strong>Description:</strong> A classic Snake game recreated using the Turtle graphics module. Fun and interactive with basic game logic and UI.</p>
+    </div>
+
+    <div class="project">
+        <h3>6. Doctor’s Appointment Management System (College Minor Project)</h3>
+        <p><strong>Tech Stack:</strong> Python (or possibly with GUI like Tkinter), SQLite (optional)</p>
+        <p><strong>Description:</strong> A system to book, manage, and track doctor appointments for a clinic. Includes patient details, time slots, and basic admin access.</p>
+    </div>
+
+    <div class="project">
+        <h3>7. Random Quote Generator with a Twist</h3>
+        <p><strong>Idea:</strong> A command-line or GUI app that not only gives a random motivational quote but also explains it in simple terms.</p>
+        <p><strong>Twist:</strong> Add a “Mood Mode” where quotes change based on selected mood: Sad, Focused, Lazy, etc.</p>
+    </div>
+
+    <div class="project">
+        <h3>8. Daily Habit Tracker (Console-Based)</h3>
+        <p><strong>Idea:</strong> A simple Python app that allows users to track daily habits and see progress over a week/month.</p>
+        <p><strong>Twist:</strong> Save data in a JSON file. Add motivational messages after streaks.</p>
+    </div>
+</section>
+{% endblock %}
